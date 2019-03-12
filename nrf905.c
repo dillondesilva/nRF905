@@ -12,10 +12,15 @@
 #include <linux/of_gpio.h>
 
 
+
+
 static struct class *nrf905_class = NULL;
 static struct device *nrf905_device = NULL;
 static int nrf905_major;
 
+// Driver data for the sensor. This
+// struct stores information relating to 
+// the usage of the connected device
 struct nrf905_drvdata {
     dev_t devt;
     spinlock_t spi_lock;
